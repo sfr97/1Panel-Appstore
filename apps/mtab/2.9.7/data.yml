@@ -1,0 +1,79 @@
+additionalProperties:
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mysql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+        - label: MariaDB
+          value: mariadb
+
+    - default: 3306
+      edit: true
+      envKey: PANEL_DB_PORT
+      labelEn: Database Port
+      labelZh: 数据库端口
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: mtab
+      envKey: PANEL_DB_NAME
+      labelEn: Database Name
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+
+    - default: mtab
+      envKey: PANEL_DB_USER
+      labelEn: Database Username
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+
+    - default: mtab
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+
+    - default: admin@mtab.local
+      envKey: PANEL_ADMIN_USER
+      labelEn: Admin Email / Account
+      labelZh: 管理员邮箱/账号
+      required: true
+      type: text
+
+    - default: mtab@2024
+      envKey: PANEL_ADMIN_PASSWORD
+      labelEn: Admin Password
+      labelZh: 管理员密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+
+    - default: 18090
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: Web 端口
+      required: true
+      rule: paramPort
+      type: number

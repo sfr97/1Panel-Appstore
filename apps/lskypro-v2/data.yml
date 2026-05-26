@@ -1,0 +1,19 @@
+name: Lsky Pro+
+tags:
+    - 建站
+title: Lsky Pro+
+description: Lsky Pro+ 是一款基于 Laravel 的 Web 图片管理程序。
+additionalProperties:
+    key: lskypro-v2
+    name: Lsky Pro+
+    tags:
+        - Website
+    shortDescZh: Lsky Pro+ 是一款基于 Laravel 的 Web 图片管理程序。
+    shortDescEn: Lsky Pro+ is a web image management application built with Laravel.
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 10
+    website: https://www.lsky.pro
+    github: https://github.com/lsky-org/lsky-pro
+    document: https://docs.lsky.pro/guide/install

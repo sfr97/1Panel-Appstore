@@ -1,0 +1,36 @@
+networks:
+    1panel-network:
+        external: true
+services:
+    lskypro-v2:
+        container_name: ${CONTAINER_NAME}
+        deploy:
+            resources:
+                limits:
+                    cpus: ${CPUS}
+                    memory: ${MEMORY_LIMIT}
+        env_file:
+            - .env
+        environment:
+            TZ: Asia/Shanghai
+        healthcheck:
+            interval: 30s
+            retries: 10
+            start_period: 60s
+            test:
+                - CMD-SHELL
+                - curl -fsS http://127.0.0.1:8000/ >/dev/null || exit 1
+            timeout: 10s
+        image: 0xxb/lsky-pro:latest
+        labels:
+            createdBy: Apps
+        networks:
+            - 1panel-network
+        ports:
+            - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:8000
+        restart: always
+        stdin_open: true
+        tty: true
+        volumes:
+            - ./data/lskypro:/app/storage/app
+            - ./data/lskypro/themes:/app/themes

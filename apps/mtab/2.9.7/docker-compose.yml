@@ -1,0 +1,46 @@
+services:
+  mtab:
+    image: itushan/mtab:2.9.7
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    labels:
+      createdBy: Apps
+    env_file:
+      - .env
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_HOST: ${PANEL_DB_HOST}
+      MYSQL_PORT: ${PANEL_DB_PORT}
+      MYSQL_DATABASE: ${PANEL_DB_NAME}
+      MYSQL_USER: ${PANEL_DB_USER}
+      MYSQL_PASSWORD: ${PANEL_DB_USER_PASSWORD}
+      ADMIN_USER: ${PANEL_ADMIN_USER}
+      ADMIN_PASSWORD: ${PANEL_ADMIN_PASSWORD}
+    ports:
+      - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:80
+    volumes:
+      - ./data:/app
+      - /etc/localtime:/etc/localtime:ro
+    entrypoint:
+      - /bin/bash
+      - /start.sh
+    networks:
+      - 1panel-network
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - wget -qO- http://127.0.0.1/ >/dev/null 2>&1 || curl -fsS http://127.0.0.1/ >/dev/null 2>&1 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+
+networks:
+  1panel-network:
+    external: true
+    name: 1panel-network

@@ -1,0 +1,19 @@
+name: mTab 新标签页
+tags:
+  - WebSite
+  - Tool
+title: mTab 新标签页
+description: mTab书签是一款集导航与笔记功能于一体的书签管理工具，可以收藏并自定义常用网站的图标样式，内置丰富应用插件，支持多端同步和私有部署。
+additionalProperties:
+  key: mtab
+  name: mTab 新标签页
+  tags:
+    - Website
+  shortDescZh: mTab书签是一款集导航与笔记功能于一体的书签管理工具，可以收藏并自定义常用网站的图标样式，内置丰富应用插件，支持多端同步和私有部署。
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 10
+  website: https://www.mengfox.com/shop/197.html
+  github: https://www.mengfox.com/shop/197.html
+  document: https://www.mengfox.com/shop/197.html
