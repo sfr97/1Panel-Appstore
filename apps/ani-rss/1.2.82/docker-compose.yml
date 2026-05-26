@@ -1,0 +1,23 @@
+networks:
+  1panel-network:
+    external: true
+
+services:
+  ani-rss:
+    image: wushuo894/ani-rss:v1.2.82
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:7789
+    volumes:
+      - ${ANI_RSS_ROOT_PATH}/config:/config
+      - ${ANI_RSS_ROOT_PATH}/downloads:/downloads
+      - ${ANI_RSS_ROOT_PATH}/Media:/Media
+    environment:
+      - PORT=7789
+      - CONFIG=/config
+      - TZ=Asia/Shanghai

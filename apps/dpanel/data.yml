@@ -1,0 +1,22 @@
+name: DPanel
+tags:
+  - 实用工具
+  - Web 服务器
+title: 轻量化 docker 可视化管理面板
+description:
+  en: Lightweight Panel for Docker
+  zh: 轻量化 docker 可视化管理面板
+additionalProperties:
+  key: dpanel
+  name: DPanel
+  tags:
+    - Tool
+    - Server
+  shortDescZh: 轻量化 docker 可视化管理面板
+  shortDescEn: Lightweight Panel for Docker
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://dpanel.cc/
+  github: https://github.com/donknap/dpanel
+  document: https://dpanel.cc/README
