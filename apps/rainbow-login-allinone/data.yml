@@ -1,0 +1,19 @@
+name: 彩虹聚合登录
+tags:
+    - 建站
+title: 彩虹聚合登录
+description: 彩虹聚合登录是彩虹旗下的社会化账号聚合登录系统，让网站的最终用户可以一站式选择使用包括微信、微博、QQ、百度等多种社会化帐号登录该站点。简化用户注册登录过程、改善用户浏览站点的体验、迅速提高网站注册量和用户数据量。
+additionalProperties:
+    key: rainbow-login-allinone
+    name: 彩虹聚合登录
+    tags:
+        - Website
+    shortDescZh: 彩虹聚合登录是彩虹旗下的社会化账号聚合登录系统，让网站的最终用户可以一站式选择使用包括微信、微博、QQ、百度等多种社会化帐号登录该站点。简化用户注册登录过程、改善用户浏览站点的体验、迅速提高网站注册量和用户数据量。
+    shortDescEn: Rainbow Aggregated Login is a social account aggregation login system under Rainbow, allowing website end users to choose from multiple social accounts, including WeChat, Weibo, QQ, and Baidu, to log in to the site in one stop. It simplifies the user registration and login process, improves the user browsing experience, and rapidly increases website registrations and user data volume.
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 10
+    website: https://www.mengfox.com/shop/128.html
+    github: https://www.mengfox.com/shop/128.html
+    document: https://www.mengfox.com/shop/128.html

@@ -1,0 +1,67 @@
+additionalProperties:
+  formFields:
+    - default: "latest"
+      envKey: NETBIRD_IMAGE_TAG
+      label:
+        en: Image Tag
+        zh: 镜像标签
+        zh-Hant: 映像標籤
+      required: true
+      rule: paramCommon
+      type: text
+
+    - default: "netbird-client"
+      envKey: NB_CLIENT_NAME
+      label:
+        en: Client Name
+        zh: 客户端名称
+        zh-Hant: 用戶端名稱
+      required: true
+      rule: paramCommon
+      type: text
+
+    - default: ""
+      envKey: NB_SETUP_KEY
+      label:
+        en: Setup Key
+        zh: Setup Key
+        zh-Hant: Setup Key
+      required: true
+      type: password
+
+    - default: ""
+      envKey: NB_MANAGEMENT_URL
+      label:
+        en: Management URL
+        zh: 管理端地址
+        zh-Hant: 管理端位址
+      required: false
+      type: text
+
+    - default: "host"
+      envKey: NB_NETWORK_MODE
+      label:
+        en: Network Mode
+        zh: 网络模式
+        zh-Hant: 網路模式
+      required: true
+      type: select
+      values:
+        - label: host (recommended)
+          value: "host"
+        - label: bridge
+          value: "bridge"
+
+    - default: "false"
+      envKey: NB_DISABLE_SERVER_SSH
+      label:
+        en: Disable NetBird SSH Server
+        zh: 禁用 NetBird SSH 服务端
+        zh-Hant: 停用 NetBird SSH 服務端
+      required: true
+      type: select
+      values:
+        - label: "false"
+          value: "false"
+        - label: "true"
+          value: "true"

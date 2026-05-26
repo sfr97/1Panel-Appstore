@@ -1,0 +1,18 @@
+name: NetBird Client
+tags:
+  - Tool
+title: NetBird Client
+description: NetBird 是一个开源的零信任网络平台，允许你为你的 组织或家。我们设计NetBird时，设计得简单快速，几乎无需任何配置工作，然后离开 背后是开端口的麻烦、复杂的防火墙规则、VPN网关等。
+additionalProperties:
+  key: netbird-client
+  name: NetBird Client
+  tags:
+    - Tool
+  shortDescZh: NetBird 是一个开源的零信任网络平台，允许你为你的 组织或家。我们设计NetBird时，设计得简单快速，几乎无需任何配置工作，然后离开 背后是开端口的麻烦、复杂的防火墙规则、VPN网关等。
+  type: Tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 10
+  website: https://netbird.io/
+  github: https://github.com/netbirdio/netbird
+  document: https://docs.netbird.io/get-started/install/docker

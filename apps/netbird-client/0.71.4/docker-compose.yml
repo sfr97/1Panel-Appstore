@@ -1,0 +1,21 @@
+services:
+  netbird-client:
+    image: netbirdio/netbird:0.71.4
+    container_name: ${CONTAINER_NAME}
+    hostname: ${NB_CLIENT_NAME}
+    restart: unless-stopped
+    network_mode: ${NB_NETWORK_MODE}
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+      - SYS_RESOURCE
+    environment:
+      - NB_SETUP_KEY=${NB_SETUP_KEY}
+      - NB_MANAGEMENT_URL=${NB_MANAGEMENT_URL}
+      - NB_DISABLE_SERVER_SSH=${NB_DISABLE_SERVER_SSH}
+      - NB_HOSTNAME=${NB_CLIENT_NAME}
+      - TZ=${TIME_ZONE}
+    volumes:
+      - ./data/netbird:/var/lib/netbird
+    labels:
+      createdBy: "Apps"

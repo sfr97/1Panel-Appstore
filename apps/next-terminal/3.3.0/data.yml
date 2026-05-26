@@ -1,0 +1,82 @@
+additionalProperties:
+  formFields:
+    - type: number
+      default: 8088
+      envKey: PANEL_APP_PORT_HTTP
+      required: true
+      rule: paramPort
+      label:
+        en: Web Port
+        zh: Web 管理端口
+
+    - type: number
+      default: 2022
+      envKey: PANEL_APP_PORT_SSH
+      required: true
+      rule: paramPort
+      label:
+        en: SSH Port
+        zh: SSH 服务端口（可选）
+
+    # PostgreSQL 运行环境依赖（1Panel Runtime）
+    - type: service
+      envKey: PANEL_DB_HOST
+      key: postgresql
+      required: true
+      label:
+        en: PostgreSQL Service
+        zh: PostgreSQL 服务（运行环境）
+
+    - type: number
+      default: 5432
+      envKey: PANEL_DB_PORT
+      required: true
+      rule: paramPort
+      label:
+        en: PostgreSQL Port
+        zh: PostgreSQL 端口
+
+    - type: text
+      default: next-terminal
+      envKey: PANEL_DB_NAME
+      required: true
+      rule: paramCommon
+      label:
+        en: Database Name
+        zh: 数据库名
+
+    - type: text
+      default: next-terminal
+      envKey: PANEL_DB_USER
+      required: true
+      rule: paramCommon
+      label:
+        en: Database User
+        zh: 数据库用户
+
+    - type: password
+      default: next-terminal
+      envKey: PANEL_DB_USER_PASSWORD
+      required: true
+      random: true
+      rule: paramComplexity
+      label:
+        en: Database Password
+        zh: 数据库密码
+
+    - type: select
+      envKey: NT_LOG_LEVEL
+      required: true
+      default: debug
+      values:
+        - label: debug
+          value: debug
+        - label: info
+          value: info
+        - label: warn
+          value: warn
+        - label: error
+          value: error
+      label:
+        en: Log Level
+        zh: 日志等级

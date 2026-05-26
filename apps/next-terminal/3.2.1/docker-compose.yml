@@ -1,0 +1,29 @@
+version: "3"
+services:
+  guacd:
+    image: guacamole/guacd:latest
+    container_name: ${CONTAINER_NAME}-guacd
+    restart: always
+    networks: [ 1panel-network ]
+    volumes:
+      - ./data:/usr/local/next-terminal/data
+
+  next-terminal:
+    image: dushixiang/next-terminal:v3.2.1
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks: [ 1panel-network ]
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8088
+      - ${PANEL_APP_PORT_SSH}:2022
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data:/usr/local/next-terminal/data
+      - ./logs:/usr/local/next-terminal/logs
+      - ./config.yaml:/etc/next-terminal/config.yaml:ro
+    depends_on:
+      - guacd
+
+networks:
+  1panel-network:
+    external: true

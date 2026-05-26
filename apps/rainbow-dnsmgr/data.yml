@@ -1,0 +1,19 @@
+name: 彩虹聚合DNS管理系统
+tags:
+    - 建站
+title: 彩虹聚合DNS管理系统
+description: 彩虹聚合DNS管理系统 是一款基于ThinkPHP开发的网站程序，可实现在单一网站内管理多个平台的域名解析。
+additionalProperties:
+    key: rainbow-dnsmgr
+    name: 彩虹聚合DNS管理系统
+    tags:
+        - Website
+    shortDescZh: 彩虹聚合DNS管理系统 是一款基于ThinkPHP开发的网站程序，可实现在单一网站内管理多个平台的域名解析。
+    shortDescEn: Rainbow Aggregated DNS Management System is a website program developed based on ThinkPHP that enables the management of domain name resolution for multiple platforms within a single website.
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 10
+    website: https://github.com/netcccyun/dnsmgr
+    github: https://github.com/netcccyun/dnsmgr
+    document: https://www.mengfox.com/
