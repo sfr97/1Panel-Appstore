@@ -1,0 +1,26 @@
+additionalProperties:
+  formFields:
+    - envKey: CONTAINER_NAME
+      default: zdir
+      labelZh: 容器名称
+      labelEn: Container Name
+      required: true
+      rule: paramCommon
+      type: text
+
+    - envKey: PANEL_APP_PORT_HTTP
+      default: 6080
+      labelZh: 访问端口
+      labelEn: HTTP Port
+      required: true
+      rule: paramPort
+      type: number
+
+    - envKey: ZDIR_DATA_DIR
+      default: ./data
+      labelZh: 数据目录（相对路径）
+      labelEn: Data Directory (relative)
+      required: true
+      type: text
+      descriptionZh: 官方推荐持久化方式，默认使用应用目录下的 ./data
+      descriptionEn: Official recommended persistence, defaults to ./data under the app directory

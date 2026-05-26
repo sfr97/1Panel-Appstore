@@ -1,0 +1,72 @@
+additionalProperties:
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mysql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+        - label: MariaDB
+          value: mariadb
+        - label: PostgreSQL
+          value: postgresql
+    - default: xarr
+      envKey: PANEL_DB_NAME
+      labelEn: Database name
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: xarr
+      envKey: PANEL_DB_USER
+      labelEn: Database username
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: xarr
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database password
+      labelZh: 数据库密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: ""
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: Redis 服务
+      required: false
+      type: service
+    - default: ""
+      envKey: PANEL_REDIS_ROOT_PASSWORD
+      labelEn: Redis password
+      labelZh: Redis 密码
+      required: false
+      rule: paramComplexity
+      type: password
+    - default: ""
+      envKey: PANEL_REDIS_PORT
+      labelEn: Redis port
+      labelZh: Redis 端口
+      required: false
+      type: text
+    - default: 32000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number

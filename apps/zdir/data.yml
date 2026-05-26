@@ -1,0 +1,19 @@
+name: Zdir Pro
+tags:
+  - Storage
+title: Zdir 私有部署网盘/目录索引
+type: tool
+description: 一款集文件索引、在线预览与分享于一体的多功能私有存储程序，支持WebDAV和离线下载
+
+additionalProperties:
+  key: zdir
+  name: Zdir Pro
+  tags:
+    - Storage
+  shortDescZh: 一款集文件索引、在线预览与分享于一体的多功能私有存储程序，支持WebDAV和离线下载
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.mengfox.com/shop/163.html
+  github: https://www.mengfox.com/shop/163.html
+  document: https://www.mengfox.com/shop/163.html

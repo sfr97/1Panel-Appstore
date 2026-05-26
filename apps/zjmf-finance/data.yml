@@ -1,0 +1,21 @@
+name: 魔方财务系统
+keywords:
+    - 财务
+    - PHP
+    - MySQL
+title: 魔方财务系统
+summary: 基于 PHP + MySQL 的魔方财务系统，镜像内置 3.7.0 安装包，适合通过 1Panel 直接部署。
+description: 基于 PHP + MySQL 的魔方财务系统，镜像内置 3.7.0 安装包，适合通过 1Panel 直接部署。
+additionalProperties:
+    key: zjmf-finance
+    name: 魔方财务系统
+    tags:
+        - Website
+    shortDescZh: 基于 PHP + MySQL 的魔方财务系统，镜像内置 3.7.0 安装包，适合通过 1Panel 直接部署。
+    shortDescEn: Mofang Finance System is a PHP and MySQL based finance and business management system. The image bundles version 3.7.0 and is ready for 1Panel deployment.
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 10
+    website: https://www.idcsmart.com/
+    document: https://www.idcsmart.com/wiki_list/640.html

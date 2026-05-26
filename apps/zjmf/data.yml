@@ -1,0 +1,19 @@
+﻿name: 智简魔方业务管理系统v10
+tags:
+    - 建站
+title: 智简魔方业务管理系统v10
+description: 智简魔方业务管理系统v10 是一套基于 PHP + MySQL 的业务管理核心系统，支持快速部署，并具备较强的扩展能力。当前镜像已内置程序源码，适合通过 1Panel 直接部署。
+additionalProperties:
+    key: zjmf
+    name: 智简魔方业务管理系统v10
+    tags:
+        - Website
+    shortDescZh: 智简魔方业务管理系统v10 是一套基于 PHP + MySQL 的业务管理核心系统，当前镜像已内置程序源码，适合通过 1Panel 直接部署。
+    shortDescEn: ZJMF Business Management System v10 is a PHP and MySQL based business management core. The image includes bundled application files and is ready for 1Panel deployment.
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 10
+    website: https://www.idcsmart.com/
+    github: https://github.com/idcsmart/ZJMF-CBAP
+    document: https://www.idcsmart.com/wiki_list/933.html
